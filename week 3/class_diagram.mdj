@@ -1,0 +1,70 @@
+{
+  "_type": "Project",
+  "_id": "PROJECT_USECASE",
+  "name": "Lets_Study - Use Case Diagram",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "model_usecase",
+      "name": "Use Case Model",
+      "_parent": {"$ref": "PROJECT_USECASE"},
+      "ownedElements": [
+        {
+          "_type": "UMLUseCaseDiagram",
+          "_id": "ucd_main",
+          "name": "Lets_Study Use Case Diagram",
+          "_parent": {"$ref": "model_usecase"},
+          "ownedElements": [
+            {"_type": "UMLActor", "_id": "actor_student", "name": "Student", "_parent": {"$ref": "ucd_main"}},
+            {"_type": "UMLActor", "_id": "actor_admin",   "name": "Admin",   "_parent": {"$ref": "ucd_main"}},
+            {
+              "_type": "UMLSystem",
+              "_id": "system_letsstudy",
+              "name": "Lets_Study",
+              "_parent": {"$ref": "ucd_main"},
+              "ownedElements": [
+                {"_type": "UMLUseCase", "_id": "uc_login",         "name": "Login",                         "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_manage_sub",    "name": "Manage Subjects",               "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_start_timer",   "name": "Start Focus Timer",             "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_pause_stop",    "name": "Pause / Stop Timer",            "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_analytics",     "name": "View Analytics Dashboard",      "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_ai_coach",      "name": "Get AI Coach Advice",           "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_create_note",   "name": "Create Note",                   "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_edit_note",     "name": "Edit Note",                     "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_ai_auto",       "name": "AI Autocomplete in Note",       "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_export_note",   "name": "Export Note",                   "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_upload_pdf",    "name": "Upload Study PDF",              "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_view_dag",      "name": "View Topic Prerequisite Graph", "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_search",        "name": "Semantic Search in PDF",        "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_checklist",     "name": "View Daily Checklist",          "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_view_reports",  "name": "View All User Reports",         "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_manage_users",  "name": "Manage Users",                  "_parent": {"$ref": "system_letsstudy"}},
+                {"_type": "UMLUseCase", "_id": "uc_delete_reports","name": "Delete Reports",                "_parent": {"$ref": "system_letsstudy"}}
+              ]
+            },
+            {"_type": "UMLAssociation", "_id": "a1",  "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_student"}}, "end2": {"reference": {"$ref": "uc_login"}}},
+            {"_type": "UMLAssociation", "_id": "a2",  "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_student"}}, "end2": {"reference": {"$ref": "uc_manage_sub"}}},
+            {"_type": "UMLAssociation", "_id": "a3",  "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_student"}}, "end2": {"reference": {"$ref": "uc_start_timer"}}},
+            {"_type": "UMLAssociation", "_id": "a4",  "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_student"}}, "end2": {"reference": {"$ref": "uc_pause_stop"}}},
+            {"_type": "UMLAssociation", "_id": "a5",  "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_student"}}, "end2": {"reference": {"$ref": "uc_analytics"}}},
+            {"_type": "UMLAssociation", "_id": "a6",  "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_student"}}, "end2": {"reference": {"$ref": "uc_ai_coach"}}},
+            {"_type": "UMLAssociation", "_id": "a7",  "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_student"}}, "end2": {"reference": {"$ref": "uc_create_note"}}},
+            {"_type": "UMLAssociation", "_id": "a8",  "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_student"}}, "end2": {"reference": {"$ref": "uc_edit_note"}}},
+            {"_type": "UMLAssociation", "_id": "a9",  "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_student"}}, "end2": {"reference": {"$ref": "uc_upload_pdf"}}},
+            {"_type": "UMLAssociation", "_id": "a10", "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_student"}}, "end2": {"reference": {"$ref": "uc_checklist"}}},
+            {"_type": "UMLAssociation", "_id": "a11", "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_admin"}},   "end2": {"reference": {"$ref": "uc_login"}}},
+            {"_type": "UMLAssociation", "_id": "a12", "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_admin"}},   "end2": {"reference": {"$ref": "uc_view_reports"}}},
+            {"_type": "UMLAssociation", "_id": "a13", "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_admin"}},   "end2": {"reference": {"$ref": "uc_manage_users"}}},
+            {"_type": "UMLAssociation", "_id": "a14", "_parent": {"$ref": "ucd_main"}, "end1": {"reference": {"$ref": "actor_admin"}},   "end2": {"reference": {"$ref": "uc_delete_reports"}}},
+            {"_type": "UMLInclude", "_id": "inc1", "_parent": {"$ref": "ucd_main"}, "source": {"$ref": "uc_start_timer"}, "target": {"$ref": "uc_manage_sub"}},
+            {"_type": "UMLInclude", "_id": "inc2", "_parent": {"$ref": "ucd_main"}, "source": {"$ref": "uc_ai_coach"},    "target": {"$ref": "uc_analytics"}},
+            {"_type": "UMLInclude", "_id": "inc3", "_parent": {"$ref": "ucd_main"}, "source": {"$ref": "uc_create_note"}, "target": {"$ref": "uc_ai_auto"}},
+            {"_type": "UMLInclude", "_id": "inc4", "_parent": {"$ref": "ucd_main"}, "source": {"$ref": "uc_upload_pdf"},  "target": {"$ref": "uc_view_dag"}},
+            {"_type": "UMLInclude", "_id": "inc5", "_parent": {"$ref": "ucd_main"}, "source": {"$ref": "uc_upload_pdf"},  "target": {"$ref": "uc_search"}},
+            {"_type": "UMLExtend",  "_id": "ext1", "_parent": {"$ref": "ucd_main"}, "source": {"$ref": "uc_edit_note"},   "target": {"$ref": "uc_export_note"}}
+          ]
+        }
+      ]
+    }
+  ]
+}
