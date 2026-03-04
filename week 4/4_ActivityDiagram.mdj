@@ -1,0 +1,2932 @@
+{
+  "_type": "Project",
+  "_id": "P4",
+  "name": "Lets_Study - Activity Diagram",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "M4",
+      "name": "Activity Model",
+      "_parent": {
+        "$ref": "P4"
+      },
+      "ownedElements": [
+        {
+          "_type": "UMLInitialNode",
+          "_id": "an_start",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Start"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_open",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Open Lets_Study"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_signin",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Sign in with Google"
+        },
+        {
+          "_type": "UMLDecisionNode",
+          "_id": "ad_auth",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Authenticated?"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_dashboard",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Load Dashboard"
+        },
+        {
+          "_type": "UMLDecisionNode",
+          "_id": "ad_choice",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Choose Activity"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_select_sub",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Select Subject"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_start_timer",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Click Start Timer"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_insert_start",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "INSERT start event"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_running",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Timer Running"
+        },
+        {
+          "_type": "UMLDecisionNode",
+          "_id": "ad_timer",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Student Action?"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_pause",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "INSERT pause event"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_paused",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Timer Paused"
+        },
+        {
+          "_type": "UMLDecisionNode",
+          "_id": "ad_resume",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Resume or Stop?"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_resume",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "INSERT resume event"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_stop",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "INSERT stop event"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_derive",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "deriveFocusState"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_saved",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Session Saved"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_fetch",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Fetch all focus_events"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_segments",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "eventsToSegments"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_totals",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Compute totals"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_score",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Calculate Productivity Score"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_insights",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Generate Smart Insights"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_charts",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Render Charts & Calendar"
+        },
+        {
+          "_type": "UMLDecisionNode",
+          "_id": "ad_ai",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Open AI Coach?"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_ai_send",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Send analytics to Groq"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_ai_display",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Display AI Advice"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_notes_lib",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "View Notes Library"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_open_editor",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Open BlockNote Editor"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_autosave",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Debounced auto-save to DB"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_export",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Export Note (md/html/doc)"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_upload_pdf",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Upload PDF"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_chunk",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Chunk PDF text"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_embed",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Generate Embeddings"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_cluster",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "K-Means Clustering"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_label",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "LLM Topic Labelling (Groq)"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_dag",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Build DAG (Prereq Graph)"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_store",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Store in Supabase pgvector"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_display_dag",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Display Clusters/Topics/DAG"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_checklist",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "View Daily Checklist"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_add_task",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Add Task"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_toggle_task",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Toggle Task Complete"
+        },
+        {
+          "_type": "UMLAction",
+          "_id": "aa_logout",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Logout"
+        },
+        {
+          "_type": "UMLActivityFinalNode",
+          "_id": "an_end",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "End"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f1",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "an_start"
+          },
+          "target": {
+            "$ref": "aa_open"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f2",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_open"
+          },
+          "target": {
+            "$ref": "aa_signin"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f3",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_signin"
+          },
+          "target": {
+            "$ref": "ad_auth"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f4",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_auth"
+          },
+          "target": {
+            "$ref": "aa_signin"
+          },
+          "guard": "No"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f5",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_auth"
+          },
+          "target": {
+            "$ref": "aa_dashboard"
+          },
+          "guard": "Yes"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f6",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_dashboard"
+          },
+          "target": {
+            "$ref": "ad_choice"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f7",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_choice"
+          },
+          "target": {
+            "$ref": "aa_select_sub"
+          },
+          "guard": "Start Session"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f8",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_select_sub"
+          },
+          "target": {
+            "$ref": "aa_start_timer"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f9",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_start_timer"
+          },
+          "target": {
+            "$ref": "aa_insert_start"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f10",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_insert_start"
+          },
+          "target": {
+            "$ref": "aa_running"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f11",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_running"
+          },
+          "target": {
+            "$ref": "ad_timer"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f12",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_timer"
+          },
+          "target": {
+            "$ref": "aa_pause"
+          },
+          "guard": "Pause"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f13",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_pause"
+          },
+          "target": {
+            "$ref": "aa_paused"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f14",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_paused"
+          },
+          "target": {
+            "$ref": "ad_resume"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f15",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_resume"
+          },
+          "target": {
+            "$ref": "aa_resume"
+          },
+          "guard": "Resume"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f16",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_resume"
+          },
+          "target": {
+            "$ref": "aa_running"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f17",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_resume"
+          },
+          "target": {
+            "$ref": "aa_stop"
+          },
+          "guard": "Stop"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f18",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_timer"
+          },
+          "target": {
+            "$ref": "aa_stop"
+          },
+          "guard": "Stop"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f19",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_stop"
+          },
+          "target": {
+            "$ref": "aa_derive"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f20",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_derive"
+          },
+          "target": {
+            "$ref": "aa_saved"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f21",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_saved"
+          },
+          "target": {
+            "$ref": "ad_choice"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f22",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_choice"
+          },
+          "target": {
+            "$ref": "aa_fetch"
+          },
+          "guard": "View Analytics"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f23",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_fetch"
+          },
+          "target": {
+            "$ref": "aa_segments"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f24",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_segments"
+          },
+          "target": {
+            "$ref": "aa_totals"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f25",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_totals"
+          },
+          "target": {
+            "$ref": "aa_score"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f26",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_score"
+          },
+          "target": {
+            "$ref": "aa_insights"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f27",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_insights"
+          },
+          "target": {
+            "$ref": "aa_charts"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f28",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_charts"
+          },
+          "target": {
+            "$ref": "ad_ai"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f29",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_ai"
+          },
+          "target": {
+            "$ref": "aa_ai_send"
+          },
+          "guard": "Yes"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f30",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_ai_send"
+          },
+          "target": {
+            "$ref": "aa_ai_display"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f31",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_ai_display"
+          },
+          "target": {
+            "$ref": "ad_choice"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f32",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_ai"
+          },
+          "target": {
+            "$ref": "ad_choice"
+          },
+          "guard": "No"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f33",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_choice"
+          },
+          "target": {
+            "$ref": "aa_notes_lib"
+          },
+          "guard": "Open Notes"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f34",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_notes_lib"
+          },
+          "target": {
+            "$ref": "aa_open_editor"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f35",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_open_editor"
+          },
+          "target": {
+            "$ref": "aa_autosave"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f36",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_open_editor"
+          },
+          "target": {
+            "$ref": "aa_export"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f37",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_export"
+          },
+          "target": {
+            "$ref": "ad_choice"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f38",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_choice"
+          },
+          "target": {
+            "$ref": "aa_upload_pdf"
+          },
+          "guard": "Upload PDF"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f39",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_upload_pdf"
+          },
+          "target": {
+            "$ref": "aa_chunk"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f40",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_chunk"
+          },
+          "target": {
+            "$ref": "aa_embed"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f41",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_embed"
+          },
+          "target": {
+            "$ref": "aa_cluster"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f42",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_cluster"
+          },
+          "target": {
+            "$ref": "aa_label"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f43",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_label"
+          },
+          "target": {
+            "$ref": "aa_dag"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f44",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_dag"
+          },
+          "target": {
+            "$ref": "aa_store"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f45",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_store"
+          },
+          "target": {
+            "$ref": "aa_display_dag"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f46",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_display_dag"
+          },
+          "target": {
+            "$ref": "ad_choice"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f47",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_choice"
+          },
+          "target": {
+            "$ref": "aa_checklist"
+          },
+          "guard": "Checklist"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f48",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_checklist"
+          },
+          "target": {
+            "$ref": "aa_add_task"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f49",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_checklist"
+          },
+          "target": {
+            "$ref": "aa_toggle_task"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f50",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_add_task"
+          },
+          "target": {
+            "$ref": "ad_choice"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f51",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_toggle_task"
+          },
+          "target": {
+            "$ref": "ad_choice"
+          }
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f52",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "ad_choice"
+          },
+          "target": {
+            "$ref": "aa_logout"
+          },
+          "guard": "Logout"
+        },
+        {
+          "_type": "UMLControlFlow",
+          "_id": "f53",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "source": {
+            "$ref": "aa_logout"
+          },
+          "target": {
+            "$ref": "an_end"
+          }
+        },
+        {
+          "_type": "UMLActivityDiagram",
+          "_id": "D4",
+          "_parent": {
+            "$ref": "M4"
+          },
+          "name": "Lets_Study Activity Diagram",
+          "defaultDiagram": true,
+          "ownedViews": [
+            {
+              "_type": "UMLInitialNodeView",
+              "_id": "v_an_start",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "an_start"
+              },
+              "left": 340,
+              "top": 20,
+              "width": 20,
+              "height": 20
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_open",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_open"
+              },
+              "left": 270,
+              "top": 70,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_signin",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_signin"
+              },
+              "left": 270,
+              "top": 130,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLDecisionNodeView",
+              "_id": "v_ad_auth",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "ad_auth"
+              },
+              "left": 320,
+              "top": 195,
+              "width": 80,
+              "height": 40
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_dashboard",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_dashboard"
+              },
+              "left": 270,
+              "top": 265,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLDecisionNodeView",
+              "_id": "v_ad_choice",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "ad_choice"
+              },
+              "left": 320,
+              "top": 330,
+              "width": 80,
+              "height": 40
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_select_sub",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_select_sub"
+              },
+              "left": 20,
+              "top": 410,
+              "width": 160,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_start_timer",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_start_timer"
+              },
+              "left": 20,
+              "top": 465,
+              "width": 160,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_insert_start",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_insert_start"
+              },
+              "left": 20,
+              "top": 520,
+              "width": 160,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_running",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_running"
+              },
+              "left": 20,
+              "top": 575,
+              "width": 160,
+              "height": 36
+            },
+            {
+              "_type": "UMLDecisionNodeView",
+              "_id": "v_ad_timer",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "ad_timer"
+              },
+              "left": 65,
+              "top": 640,
+              "width": 80,
+              "height": 40
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_pause",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_pause"
+              },
+              "left": 20,
+              "top": 705,
+              "width": 160,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_paused",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_paused"
+              },
+              "left": 20,
+              "top": 760,
+              "width": 160,
+              "height": 36
+            },
+            {
+              "_type": "UMLDecisionNodeView",
+              "_id": "v_ad_resume",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "ad_resume"
+              },
+              "left": 65,
+              "top": 820,
+              "width": 80,
+              "height": 40
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_resume",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_resume"
+              },
+              "left": 20,
+              "top": 880,
+              "width": 160,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_stop",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_stop"
+              },
+              "left": 20,
+              "top": 935,
+              "width": 160,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_derive",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_derive"
+              },
+              "left": 20,
+              "top": 990,
+              "width": 160,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_saved",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_saved"
+              },
+              "left": 20,
+              "top": 1045,
+              "width": 160,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_fetch",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_fetch"
+              },
+              "left": 220,
+              "top": 410,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_segments",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_segments"
+              },
+              "left": 220,
+              "top": 465,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_totals",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_totals"
+              },
+              "left": 220,
+              "top": 520,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_score",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_score"
+              },
+              "left": 220,
+              "top": 575,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_insights",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_insights"
+              },
+              "left": 220,
+              "top": 630,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_charts",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_charts"
+              },
+              "left": 220,
+              "top": 685,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLDecisionNodeView",
+              "_id": "v_ad_ai",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "ad_ai"
+              },
+              "left": 265,
+              "top": 750,
+              "width": 80,
+              "height": 40
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_ai_send",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_ai_send"
+              },
+              "left": 220,
+              "top": 815,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_ai_display",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_ai_display"
+              },
+              "left": 220,
+              "top": 870,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_notes_lib",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_notes_lib"
+              },
+              "left": 430,
+              "top": 410,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_open_editor",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_open_editor"
+              },
+              "left": 430,
+              "top": 465,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_autosave",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_autosave"
+              },
+              "left": 430,
+              "top": 520,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_export",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_export"
+              },
+              "left": 430,
+              "top": 575,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_upload_pdf",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_upload_pdf"
+              },
+              "left": 640,
+              "top": 410,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_chunk",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_chunk"
+              },
+              "left": 640,
+              "top": 465,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_embed",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_embed"
+              },
+              "left": 640,
+              "top": 520,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_cluster",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_cluster"
+              },
+              "left": 640,
+              "top": 575,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_label",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_label"
+              },
+              "left": 640,
+              "top": 630,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_dag",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_dag"
+              },
+              "left": 640,
+              "top": 685,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_store",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_store"
+              },
+              "left": 640,
+              "top": 740,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_display_dag",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_display_dag"
+              },
+              "left": 640,
+              "top": 795,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_checklist",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_checklist"
+              },
+              "left": 850,
+              "top": 410,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_add_task",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_add_task"
+              },
+              "left": 850,
+              "top": 465,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_toggle_task",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_toggle_task"
+              },
+              "left": 850,
+              "top": 520,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActionView",
+              "_id": "v_aa_logout",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "aa_logout"
+              },
+              "left": 340,
+              "top": 1120,
+              "width": 180,
+              "height": 36
+            },
+            {
+              "_type": "UMLActivityFinalNodeView",
+              "_id": "v_an_end",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "an_end"
+              },
+              "left": 340,
+              "top": 1180,
+              "width": 20,
+              "height": 20
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f1",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f1"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_an_start"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_open"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "350,40;360,70"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f2",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f2"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_open"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_signin"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "360,106;360,130"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f3",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f3"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_signin"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_auth"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "360,166;360,195"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f4",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f4"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_auth"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_signin"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "360,235;360,130",
+              "label": "No"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f5",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f5"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_auth"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_dashboard"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "360,235;360,265",
+              "label": "Yes"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f6",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f6"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_dashboard"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "360,301;360,330"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f7",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f7"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_select_sub"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "360,370;100,410",
+              "label": "Start Session"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f8",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f8"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_select_sub"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_start_timer"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,446;100,465"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f9",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f9"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_start_timer"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_insert_start"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,501;100,520"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f10",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f10"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_insert_start"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_running"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,556;100,575"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f11",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f11"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_running"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_timer"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,611;105,640"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f12",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f12"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_timer"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_pause"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "105,680;100,705",
+              "label": "Pause"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f13",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f13"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_pause"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_paused"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,741;100,760"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f14",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f14"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_paused"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_resume"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,796;105,820"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f15",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f15"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_resume"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_resume"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "105,860;100,880",
+              "label": "Resume"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f16",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f16"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_resume"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_running"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,916;100,575"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f17",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f17"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_resume"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_stop"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "105,860;100,935",
+              "label": "Stop"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f18",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f18"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_timer"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_stop"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "105,680;100,935",
+              "label": "Stop"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f19",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f19"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_stop"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_derive"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,971;100,990"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f20",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f20"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_derive"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_saved"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,1026;100,1045"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f21",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f21"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_saved"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,1081;360,330"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f22",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f22"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_fetch"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "360,370;310,410",
+              "label": "View Analytics"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f23",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f23"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_fetch"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_segments"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "310,446;310,465"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f24",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f24"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_segments"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_totals"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "310,501;310,520"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f25",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f25"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_totals"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_score"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "310,556;310,575"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f26",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f26"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_score"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_insights"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "310,611;310,630"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f27",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f27"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_insights"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_charts"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "310,666;310,685"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f28",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f28"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_charts"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_ai"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "310,721;305,750"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f29",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f29"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_ai"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_ai_send"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "305,790;310,815",
+              "label": "Yes"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f30",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f30"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_ai_send"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_ai_display"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "310,851;310,870"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f31",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f31"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_ai_display"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "310,906;360,330"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f32",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f32"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_ai"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "305,790;360,330",
+              "label": "No"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f33",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f33"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_notes_lib"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "360,370;520,410",
+              "label": "Open Notes"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f34",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f34"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_notes_lib"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_open_editor"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "520,446;520,465"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f35",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f35"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_open_editor"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_autosave"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "520,501;520,520"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f36",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f36"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_open_editor"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_export"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "520,501;520,575"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f37",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f37"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_export"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "520,611;360,330"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f38",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f38"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_upload_pdf"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "360,370;730,410",
+              "label": "Upload PDF"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f39",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f39"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_upload_pdf"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_chunk"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "730,446;730,465"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f40",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f40"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_chunk"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_embed"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "730,501;730,520"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f41",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f41"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_embed"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_cluster"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "730,556;730,575"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f42",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f42"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_cluster"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_label"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "730,611;730,630"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f43",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f43"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_label"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_dag"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "730,666;730,685"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f44",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f44"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_dag"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_store"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "730,721;730,740"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f45",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f45"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_store"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_display_dag"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "730,776;730,795"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f46",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f46"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_display_dag"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "730,831;360,330"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f47",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f47"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_checklist"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "360,370;940,410",
+              "label": "Checklist"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f48",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f48"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_checklist"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_add_task"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "940,446;940,465"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f49",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f49"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_checklist"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_toggle_task"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "940,446;940,520"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f50",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f50"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_add_task"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "940,501;360,330"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f51",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f51"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_toggle_task"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "940,556;360,330"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f52",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f52"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ad_choice"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_aa_logout"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "360,370;430,1120",
+              "label": "Logout"
+            },
+            {
+              "_type": "UMLControlFlowView",
+              "_id": "vf_f53",
+              "_parent": {
+                "$ref": "D4"
+              },
+              "model": {
+                "$ref": "f53"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_aa_logout"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_an_end"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "430,1156;350,1180"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

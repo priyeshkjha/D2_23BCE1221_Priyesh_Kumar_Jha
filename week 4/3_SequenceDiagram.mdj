@@ -1,0 +1,1025 @@
+{
+  "_type": "Project",
+  "_id": "P3",
+  "name": "Lets_Study - Sequence Diagram",
+  "ownedElements": [
+    {
+      "_type": "UMLModel",
+      "_id": "M3",
+      "name": "Sequence Model",
+      "_parent": {
+        "$ref": "P3"
+      },
+      "ownedElements": [
+        {
+          "_type": "UMLLifeline",
+          "_id": "ll_student",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Student",
+          "stereotype": "actor"
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "ll_ui",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Next.js Frontend",
+          "stereotype": ""
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "ll_auth",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "NextAuth (OAuth)",
+          "stereotype": ""
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "ll_db",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Supabase DB",
+          "stereotype": ""
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "ll_rt",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Supabase Realtime",
+          "stereotype": ""
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "ll_groq",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Groq AI API",
+          "stereotype": ""
+        },
+        {
+          "_type": "UMLLifeline",
+          "_id": "ll_fastapi",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "FastAPI Backend",
+          "stereotype": ""
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m1",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Sign in with Google",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_student"
+          },
+          "target": {
+            "$ref": "ll_ui"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m2",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Initiate OAuth 2.0 flow",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_ui"
+          },
+          "target": {
+            "$ref": "ll_auth"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m3",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Return session + userId",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "ll_auth"
+          },
+          "target": {
+            "$ref": "ll_ui"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m4",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Redirect to Dashboard",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "ll_ui"
+          },
+          "target": {
+            "$ref": "ll_student"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m5",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Select Subject - Start",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_student"
+          },
+          "target": {
+            "$ref": "ll_ui"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m6",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "INSERT focus_event {start}",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_ui"
+          },
+          "target": {
+            "$ref": "ll_db"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m7",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Broadcast event change",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_db"
+          },
+          "target": {
+            "$ref": "ll_rt"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m8",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Realtime update received",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "ll_rt"
+          },
+          "target": {
+            "$ref": "ll_ui"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m9",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Timer starts ticking",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "ll_ui"
+          },
+          "target": {
+            "$ref": "ll_student"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m10",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Open AI Coach panel",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_student"
+          },
+          "target": {
+            "$ref": "ll_ui"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m11",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "POST analyticsData as context",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_ui"
+          },
+          "target": {
+            "$ref": "ll_groq"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m12",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Return personalised advice",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "ll_groq"
+          },
+          "target": {
+            "$ref": "ll_ui"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m13",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Display coaching message",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "ll_ui"
+          },
+          "target": {
+            "$ref": "ll_student"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m14",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Type ++ in editor",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_student"
+          },
+          "target": {
+            "$ref": "ll_ui"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m15",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "POST note context",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_ui"
+          },
+          "target": {
+            "$ref": "ll_groq"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m16",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Return completion text",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "ll_groq"
+          },
+          "target": {
+            "$ref": "ll_ui"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m17",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Inline AI text inserted",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "ll_ui"
+          },
+          "target": {
+            "$ref": "ll_student"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m18",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Upload PDF",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_student"
+          },
+          "target": {
+            "$ref": "ll_ui"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m19",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "POST /upload-pdf",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_ui"
+          },
+          "target": {
+            "$ref": "ll_fastapi"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m20",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Chunk-Embed-Cluster-DAG",
+          "messageSort": "synch",
+          "source": {
+            "$ref": "ll_fastapi"
+          },
+          "target": {
+            "$ref": "ll_fastapi"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m21",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Return PipelineData",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "ll_fastapi"
+          },
+          "target": {
+            "$ref": "ll_ui"
+          }
+        },
+        {
+          "_type": "UMLMessage",
+          "_id": "m22",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Show Clusters/Topics/DAG",
+          "messageSort": "reply",
+          "source": {
+            "$ref": "ll_ui"
+          },
+          "target": {
+            "$ref": "ll_student"
+          }
+        },
+        {
+          "_type": "UMLSequenceDiagram",
+          "_id": "D3",
+          "_parent": {
+            "$ref": "M3"
+          },
+          "name": "Lets_Study Sequence Diagram",
+          "defaultDiagram": true,
+          "ownedViews": [
+            {
+              "_type": "UMLLifelineView",
+              "_id": "v_ll_student",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "ll_student"
+              },
+              "left": 40,
+              "top": 40,
+              "width": 120,
+              "height": 1140
+            },
+            {
+              "_type": "UMLLifelineView",
+              "_id": "v_ll_ui",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "ll_ui"
+              },
+              "left": 180,
+              "top": 40,
+              "width": 120,
+              "height": 1140
+            },
+            {
+              "_type": "UMLLifelineView",
+              "_id": "v_ll_auth",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "ll_auth"
+              },
+              "left": 320,
+              "top": 40,
+              "width": 120,
+              "height": 1140
+            },
+            {
+              "_type": "UMLLifelineView",
+              "_id": "v_ll_db",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "ll_db"
+              },
+              "left": 460,
+              "top": 40,
+              "width": 120,
+              "height": 1140
+            },
+            {
+              "_type": "UMLLifelineView",
+              "_id": "v_ll_rt",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "ll_rt"
+              },
+              "left": 600,
+              "top": 40,
+              "width": 120,
+              "height": 1140
+            },
+            {
+              "_type": "UMLLifelineView",
+              "_id": "v_ll_groq",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "ll_groq"
+              },
+              "left": 740,
+              "top": 40,
+              "width": 120,
+              "height": 1140
+            },
+            {
+              "_type": "UMLLifelineView",
+              "_id": "v_ll_fastapi",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "ll_fastapi"
+              },
+              "left": 880,
+              "top": 40,
+              "width": 120,
+              "height": 1140
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m1",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m1"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_student"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,120;240,120"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m2",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m2"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_auth"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "240,160;380,160"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m3",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m3"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_auth"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "380,200;240,200"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m4",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m4"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_student"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "240,240;100,240"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m5",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m5"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_student"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,310;240,310"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m6",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m6"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_db"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "240,350;520,350"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m7",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m7"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_db"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_rt"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "520,390;660,390"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m8",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m8"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_rt"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "660,430;240,430"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m9",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m9"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_student"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "240,470;100,470"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m10",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m10"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_student"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,540;240,540"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m11",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m11"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_groq"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "240,580;800,580"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m12",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m12"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_groq"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "800,620;240,620"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m13",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m13"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_student"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "240,660;100,660"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m14",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m14"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_student"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,730;240,730"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m15",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m15"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_groq"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "240,770;800,770"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m16",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m16"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_groq"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "800,810;240,810"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m17",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m17"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_student"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "240,850;100,850"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m18",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m18"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_student"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "100,920;240,920"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m19",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m19"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_fastapi"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "240,960;940,960"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m20",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m20"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_fastapi"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_fastapi"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "940,1000;940,1000"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m21",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m21"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_fastapi"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "940,1040;240,1040"
+            },
+            {
+              "_type": "UMLMessageView",
+              "_id": "vm_m22",
+              "_parent": {
+                "$ref": "D3"
+              },
+              "model": {
+                "$ref": "m22"
+              },
+              "end1": {
+                "reference": {
+                  "$ref": "v_ll_ui"
+                },
+                "_type": "EdgeParamView"
+              },
+              "end2": {
+                "reference": {
+                  "$ref": "v_ll_student"
+                },
+                "_type": "EdgeParamView"
+              },
+              "points": "240,1080;100,1080"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
